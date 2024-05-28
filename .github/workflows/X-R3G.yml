@@ -4,7 +4,7 @@
 # Author: kenzo
 #=================================================
 
-name: nanopi-r4s
+name: X-R3G
 
 on:
   repository_dispatch:
@@ -37,7 +37,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: [nanopi-r4s]    
+        target: [X-R3G]    
     
     steps:
     - name: Checkout
@@ -67,7 +67,7 @@ jobs:
 
     - name: Clone source code
       env: 
-        REPO_URL: https://github.com/coolsnowwolf/lede
+        REPO_URL: https://github.com/x-wrt/x-wrt.git
         REPO_BRANCH: master
       run: |
         git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
