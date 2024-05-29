@@ -83,7 +83,7 @@ jobs:
       env:
         CONFIG_FILE: configs/Lean-chen.config
       run: |
-        [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
+        [ -e $CONFIG_FILE ] && mv $CONFIG_FILE configs/Lean-chen.config
         chmod +x ./customize.sh && ./customize.sh
         cd openwrt
         rm -rf feeds/packages/lang/golang
